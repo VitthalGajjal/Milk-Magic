@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deleteworkinfo"
+    android:layout_gravity="bottom"
+    app:cardCornerRadius="20sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingBottom="50sp"
+        android:background="@drawable/bg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="todays work"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_serachdeletecustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_customerinfo"
+            android:layout_margin="10sp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:hint="Search to delete"
+            android:padding="10sp" />
+
+        <Button
+            android:id="@+id/btn_savecustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_edittext"
+            android:onClick="workinfodelete"
+            android:padding="10sp"
+            android:layout_margin="10sp"
+            android:text="Delete" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customerinfo"
+    android:background="@drawable/bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_customer"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500"
+        app:title="Customerinfo" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_customerinfo"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar_customer"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_addcustomerinfo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_addcustomerinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_customeradd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:onClick="addcustomerinfo"
+            android:text="Add Customer info" />
+
+    </LinearLayout>
+
+</RelativeLayout>

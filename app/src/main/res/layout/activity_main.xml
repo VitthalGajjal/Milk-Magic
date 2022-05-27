@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20sp"
+    android:background="@drawable/bg">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aboutus"
+        android:text="Milk Magic"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_customerinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_margin="20sp"
+        android:elevation="100sp"
+        android:onClick="customerinfo"
+        app:cardCornerRadius="20sp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FDA4C7CC">
+
+            <ImageView
+                android:id="@+id/iv_customer"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:paddingBottom="30sp"
+                android:src="@drawable/c"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="20sp"
+                android:text="customer info"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_todayswork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_customerinfo"
+        android:layout_margin="20sp"
+        android:elevation="100sp"
+        android:onClick="todayswork"
+        app:cardCornerRadius="20sp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FDA4C7CC">
+
+            <ImageView
+                android:id="@+id/iv_todayswork"
+                android:layout_width="match_parent"
+                android:paddingTop="20sp"
+                android:paddingBottom="60sp"
+                android:layout_height="250sp"
+                android:src="@drawable/w"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="20sp"
+                android:text="todays work"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".todayswork"
+    android:background="@drawable/bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_work"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_500"
+        app:title="Today's work" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_todayswork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_work"
+        android:layout_above="@+id/ll_addwork"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_addwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_margin="10sp"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/btn_customeradd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:onClick="addwork"
+            android:text="Add Work"
+            android:background="@drawable/rounded_edittext"/>
+
+        <Button
+            android:id="@+id/btn_workdelete"
+            android:layout_width="45sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="1"
+            android:onClick="deletework"
+            android:text=""
+            android:background="@drawable/rounded_edittext"
+            android:drawableLeft="@drawable/ic_baseline_delete_24"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

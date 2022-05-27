@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addcustomerinfo"
+    android:orientation="vertical"
+    android:padding="30sp"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/tv_newcustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="100sp"
+        android:padding="10sp"
+        android:text="New Customer"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_newcustomer"
+        android:layout_below="@+id/tv_newcustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:elevation="100sp"
+        app:cardCornerRadius="30sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/et_customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:hint="Name"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:background="@drawable/rounded_edittext"
+                android:padding="10sp"/>
+
+            <EditText
+                android:id="@+id/et_customer_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:hint="Phone"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:drawableLeft="@drawable/ic_baseline_phone_24"
+                android:background="@drawable/rounded_edittext"
+                android:padding="10sp"/>
+
+            <EditText
+                android:id="@+id/et_customer_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:ems="10"
+                android:hint="Address"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:background="@drawable/rounded_edittext"
+                android:padding="10sp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_savecustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_edittext"
+        android:onClick="savecustomerinfo"
+        android:padding="10sp"
+        android:text="Save" />
+
+
+</RelativeLayout>
